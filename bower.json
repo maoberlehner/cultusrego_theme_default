@@ -1,0 +1,26 @@
+{
+  "name": "cultusrego_theme_default",
+  "version": "1.0.0",
+  "homepage": "https://github.com/maoberlehner/cultusrego_theme_default",
+  "authors": [
+    "Markus Oberlehner"
+  ],
+  "description": "Default theme for the cultusrego styleguide generator",
+  "main": "css/cultusrego-theme-default.css",
+  "keywords": [
+    "cultusrego",
+    "styleguide"
+  ],
+  "license": "GPL v2",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "avalanche_object_grid": "^2.0.0",
+    "normalize.css": "~3.0.3"
+  }
+}

@@ -1,0 +1,49 @@
+/**
+ * cultusrego_theme_default
+ * Default theme for the cultusrego styleguide generator
+ */
+/**
+ * Function
+ * Custom SASS functions
+ */
+@import 'function/*';
+
+
+
+/**
+ * System
+ * Everything system relevant (e.g. variables)
+ */
+@import 'system/*';
+
+
+
+/**
+ * Base
+ * Base styles like typography and other global default styles (mostly unclassed HTML elements)
+ */
+@import 'base/*';
+
+
+
+/**
+ * Utility
+ * Utility classes that do very specific things (e.g. clearfix)
+ */
+@import 'utility/*';
+
+
+
+/**
+ * Object
+ * Non-cosmetic styles (e.g. the famous media object)
+ */
+@import 'object/*';
+
+
+
+/**
+ * Component
+ * Concrete, implementation-specific piece of UI
+ */
+@import 'component/*';

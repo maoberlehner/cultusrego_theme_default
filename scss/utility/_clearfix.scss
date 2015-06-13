@@ -1,0 +1,26 @@
+/**
+ * @name Clearfix
+ * @level X.X.
+ * @description
+ *   Contain floats
+ *
+ * @code
+ *   <div class="u-clearfix">
+ *     <div class="stuff-that-floats"></div>
+ *   </div>
+ */
+@mixin u-clearfix() {
+  *zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    content: ' ';
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.u-clearfix {
+  @include u-clearfix();
+}

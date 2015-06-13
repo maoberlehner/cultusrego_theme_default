@@ -1,0 +1,21 @@
+/**
+ * @name breakpointmax
+ * @level X.X.
+ * @description
+ *   Get the max-width value of a breakpoint
+ *
+ * @code [scss]
+ *   @media (max-width: breakpointmax($breakpoint-m)) {
+ *     .foo { }
+ *   }
+ *   @media (max-width: breakpointmax($breakpoint-m, 14px)) {
+ *     .foo { }
+ *   }
+ */
+@function breakpointmax($breakpoint, $base: $font-base-size) {
+  @if unit($breakpoint) == em {
+    $em1px: 1 / strip-unit($base);
+    @return $breakpoint - $em1px;
+  }
+  @return $breakpoint - 1;
+}
