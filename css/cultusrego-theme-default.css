@@ -1,0 +1,563 @@
+/**
+ * cultusrego_theme_default
+ * Default theme for the cultusrego styleguide generator
+ */
+/**
+ * Function
+ * Custom SASS functions
+ */
+/**
+ * @name breakpointmax
+ * @level X.X.
+ * @description
+ *   Get the max-width value of a breakpoint
+ *
+ * @code [scss]
+ *   @media (max-width: breakpointmax($breakpoint-m)) {
+ *     .foo { }
+ *   }
+ *   @media (max-width: breakpointmax($breakpoint-m, 14px)) {
+ *     .foo { }
+ *   }
+ */
+/**
+ * @name strip-unit
+ * @level X.X.
+ * @description
+ *   Strip units from values
+ *
+ * @code [scss]
+ *   .foo {
+ *     line-height: strip-unit($font-size-s);
+ *   }
+ */
+/**
+ * System
+ * Everything system relevant (e.g. variables)
+ */
+/**
+ * @name Variable
+ * @level X.X.
+ * @description
+ *   Basic system variables
+ */
+/**
+ * @name Color Scheme
+ * @level X.X.X.
+ * @description
+ *   It's mandatory to use color scheme variables whenever you use colors in your styles  
+ *   Fancy generator: [coolors.co](http://coolors.co/)
+ */
+/**
+ * @name Basic
+ * @level X.X.X.X.
+ */
+/**
+ * @colors
+ *   $cs-a|#16193B $cs-b|#35478C $cs-c|#4E7AC7 $cs-d|#7FB2F0 $cs-e|#ADD5F7
+ *   $cs-a-contrast|#fff $cs-b-contrast|#fff $cs-c-contrast|#fff $cs-d-contrast|#fff $cs-e-contrast|#fff
+ */
+/**
+ * @name Alerts
+ * @level X.X.X.X.
+ * @description Colors for alerts e.g. success, error, info,...
+ */
+/**
+ * @colors
+ *   $cs-positive|#468847 $cs-neutral|#3A87AD $cs-cautious|#c09853 $cs-negative|#b94a48
+ */
+/**
+ * @name Grey
+ * @level X.X.X.X.
+ */
+/**
+ * @colors
+ *   $cs-grey-a|#efefef $cs-grey-b|#d5d5d5 $cs-grey-c|#bcbcbc
+ */
+/**
+ * @name Typography
+ * @level X.X.X.
+ * @description
+ *   If you use webfonts set the font weight variables according to the font weights the font provides  
+ *   e.g. you use a Google font like http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700  
+ *   In this case set the font weights to 200, 400 and 700  
+ *   If you set a font weight in your css you must use this variables!
+ */
+/**
+ * @name Basic configuration
+ * @level X.X.X.X.
+ * @description
+ *   Do not use the **$font-base-size** and **$font-base-line-height** directly in your styles!
+ *
+ * 1. must be in px, do not use in your styles
+ */
+/* [1] */
+/* [1] */
+/**
+ * @variables
+ *   $font-base-size|16px $font-base-line-height|24px $font-base-color|#222
+ */
+/**
+ * @name Font sizes
+ * @level X.X.X.X.
+ */
+/**
+ * @variables
+ *   $font-size-xs|0.75em $font-size-s|0.85em $font-size-m|1em $font-size-l|1.25em $font-size-xl|1.5em $font-size-xxl|1.875em $font-size-xxxl|2.25em
+ */
+/**
+ * @variables
+ *   $font-size-h1|2.25em $font-size-h2|1.875em $font-size-h3|1.5em $font-size-h4|1.25em $font-size-h5|1em $font-size-h6|1em
+ */
+/**
+ * @name System fonts
+ * @level X.X.X.X.
+ * @description
+ *   Font sizes and weights are defined globally to ensure a consistent look
+ */
+/**
+ * @name Font A
+ * @level X.X.X.X.X.
+ */
+/**
+ * @font ['Helvetica Neue', sans-serif]
+ *   ABCDEFGHIJKLMNOPQRSTUVWXYZ  
+ *   abcdefghijklmnopqrstuvwxyz  
+ *   0123456789  
+ *   !&/()$=@;:,.
+ */
+/**
+ * @name Font B
+ * @level X.X.X.X.X.
+ */
+/**
+ * @font [Futura, 'Trebuchet MS', sans-serif]
+ *   ABCDEFGHIJKLMNOPQRSTUVWXYZ  
+ *   abcdefghijklmnopqrstuvwxyz  
+ *   0123456789  
+ *   !&/()$=@;:,.
+ */
+/**
+ * @name Anchors
+ * @level X.X.X.X.
+ */
+/**
+ * @colors
+ *   $a-color|#16193B $a-color-visited|#16193B $a-color-hover|#16193B
+ *
+ * @variables
+ *   $a-text-decoration|underline $a-text-decoration-hover|none
+ */
+/**
+ * @name Text selection
+ * @level X.X.X.X.
+ * @description
+ *   Select some text to see it in action
+ */
+/**
+ * @colors
+ *   $selection-background|#16193B $selection-color|#fff
+ */
+/**
+ * @name Breakpoints
+ * @level X.X.X.
+ * @description
+ *   More infos about media queries:  
+ *   [Brad Frost - 7 Habits of highly effective media queries](http://bradfrost.com/blog/post/7-habits-of-highly-effective-media-queries/)
+ */
+/**
+ * @name min Breakpoints
+ * @level X.X.X.X.
+ */
+/**
+ * @variables
+ *   $breakpoint-s|30em $breakpoint-m|45em $breakpoint-l|60em $breakpoint-xl|75em
+ */
+/**
+ * @name max Breakpoints
+ * @level X.X.X.X.
+ * @description
+ *   Use with care, min-width breakpoints should be preferred!
+ */
+/**
+ * @variables
+ *   $breakpoint-max-s|29.9375em $breakpoint-max-m|44.9375em $breakpoint-max-l|59.9375em $breakpoint-max-xl|74.9375em
+ */
+/**
+ * @name Spacing
+ * @level X.X.X.
+ */
+/**
+ * @variables
+ *   $spacing-xs|0.5em $spacing-s|1em $spacing-m|1.5em $spacing-l|2em $spacing-xl|3em $spacing-xxl|4em $spacing-xxxl|5em
+ */
+/**
+ * @name Layout
+ * @level X.X.X.
+ */
+/**
+ * @variables
+ *   $layout-max-width|62em $layout-box-sizing-reset|true
+ */
+/**
+ * Base
+ * Base styles like typography and other global default styles (mostly unclassed HTML elements)
+ */
+/* No files to import found in base//* */
+/**
+ * Utility
+ * Utility classes that do very specific things (e.g. clearfix)
+ */
+/**
+ * @name Clearfix
+ * @level X.X.
+ * @description
+ *   Contain floats
+ *
+ * @code
+ *   <div class="u-clearfix">
+ *     <div class="stuff-that-floats"></div>
+ *   </div>
+ */
+.u-clearfix {
+  *zoom: 1; }
+  .u-clearfix:before, .u-clearfix:after {
+    display: table;
+    content: ' '; }
+  .u-clearfix:after {
+    clear: both; }
+
+/**
+ * @name Width
+ * @level X.X.
+ * @description
+ *   Width classes mainly (but not exclusively) to be used in grids
+ */
+/**
+ * Variables
+ */
+/**
+ * @name Base
+ * @level X.X.X.
+ * @description
+ *   Mobile first styles for all screen sizes
+ *
+ * @code
+ *   <div class="o-grid">
+ *     <div class="o-grid__item u-width--6"><span class="o-grid__inner">Width item</span></div>
+ *     <div class="o-grid__item u-width--6"><span class="o-grid__inner">Width item</span></div>
+ *   </div>
+ */
+.u-width--1 {
+  width: 8.3333333%; }
+
+.u-width--2 {
+  width: 16.6666667%; }
+
+.u-width--3 {
+  width: 25%; }
+
+.u-width--4 {
+  width: 33.3333333%; }
+
+.u-width--5 {
+  width: 41.6666667%; }
+
+.u-width--6 {
+  width: 50%; }
+
+.u-width--7 {
+  width: 58.3333333%; }
+
+.u-width--8 {
+  width: 66.6666667%; }
+
+.u-width--9 {
+  width: 75%; }
+
+.u-width--10 {
+  width: 83.3333333%; }
+
+.u-width--11 {
+  width: 91.6666667%; }
+
+.u-width--12 {
+  width: 100%; }
+
+/**
+   * @name Small
+   * @level X.X.X.
+   * @description
+   *   Screen sizes 30em (480px) and up
+   *
+   * @code
+   *   <div class="o-grid">
+   *     <div class="o-grid__item u-width--s--6"><span class="o-grid__inner">Width item</span></div>
+   *     <div class="o-grid__item u-width--s--6"><span class="o-grid__inner">Width item</span></div>
+   *   </div>
+   */
+@media (min-width: 30em) {
+  .u-width--s--1 {
+    width: 8.3333333%; }
+  .u-width--s--2 {
+    width: 16.6666667%; }
+  .u-width--s--3 {
+    width: 25%; }
+  .u-width--s--4 {
+    width: 33.3333333%; }
+  .u-width--s--5 {
+    width: 41.6666667%; }
+  .u-width--s--6 {
+    width: 50%; }
+  .u-width--s--7 {
+    width: 58.3333333%; }
+  .u-width--s--8 {
+    width: 66.6666667%; }
+  .u-width--s--9 {
+    width: 75%; }
+  .u-width--s--10 {
+    width: 83.3333333%; }
+  .u-width--s--11 {
+    width: 91.6666667%; }
+  .u-width--s--12 {
+    width: 100%; } }
+
+/**
+   * @name Medium
+   * @level X.X.X.
+   * @description
+   *   Screen sizes 45em (720px) and up
+   *
+   * @code
+   *   <div class="o-grid">
+   *     <div class="o-grid__item u-width--s--6 u-width--m--3"><span class="o-grid__inner">Width item</span></div>
+   *     <div class="o-grid__item u-width--s--6 u-width--m--3"><span class="o-grid__inner">Width item</span></div>
+   *     <div class="o-grid__item u-width--s--6 u-width--m--3"><span class="o-grid__inner">Width item</span></div>
+   *     <div class="o-grid__item u-width--s--6 u-width--m--3"><span class="o-grid__inner">Width item</span></div>
+   *   </div>
+   */
+@media (min-width: 45em) {
+  .u-width--m--1 {
+    width: 8.3333333%; }
+  .u-width--m--2 {
+    width: 16.6666667%; }
+  .u-width--m--3 {
+    width: 25%; }
+  .u-width--m--4 {
+    width: 33.3333333%; }
+  .u-width--m--5 {
+    width: 41.6666667%; }
+  .u-width--m--6 {
+    width: 50%; }
+  .u-width--m--7 {
+    width: 58.3333333%; }
+  .u-width--m--8 {
+    width: 66.6666667%; }
+  .u-width--m--9 {
+    width: 75%; }
+  .u-width--m--10 {
+    width: 83.3333333%; }
+  .u-width--m--11 {
+    width: 91.6666667%; }
+  .u-width--m--12 {
+    width: 100%; } }
+
+/**
+   * @name Large
+   * @level X.X.X.
+   * @description
+   *   Screen sizes 60em (960px) and up
+   *
+   * @code
+   *   <div class="o-grid">
+   *     <div class="o-grid__item u-width--m--6 u-width--l--3"><span class="o-grid__inner">Width item</span></div>
+   *     <div class="o-grid__item u-width--m--6 u-width--l--3"><span class="o-grid__inner">Width item</span></div>
+   *     <div class="o-grid__item u-width--m--6 u-width--l--3"><span class="o-grid__inner">Width item</span></div>
+   *     <div class="o-grid__item u-width--m--6 u-width--l--3"><span class="o-grid__inner">Width item</span></div>
+   *   </div>
+   */
+@media (min-width: 60em) {
+  .u-width--l--1 {
+    width: 8.3333333%; }
+  .u-width--l--2 {
+    width: 16.6666667%; }
+  .u-width--l--3 {
+    width: 25%; }
+  .u-width--l--4 {
+    width: 33.3333333%; }
+  .u-width--l--5 {
+    width: 41.6666667%; }
+  .u-width--l--6 {
+    width: 50%; }
+  .u-width--l--7 {
+    width: 58.3333333%; }
+  .u-width--l--8 {
+    width: 66.6666667%; }
+  .u-width--l--9 {
+    width: 75%; }
+  .u-width--l--10 {
+    width: 83.3333333%; }
+  .u-width--l--11 {
+    width: 91.6666667%; }
+  .u-width--l--12 {
+    width: 100%; } }
+
+/**
+   * @name X-Large
+   * @level X.X.X.
+   * @description
+   *   Screen sizes 75em (1200px) and up
+   *
+   * @code
+   *   <div class="o-grid">
+   *     <div class="o-grid__item u-width--l--6 u-width--xl--3"><span class="o-grid__inner">Width item</span></div>
+   *     <div class="o-grid__item u-width--l--6 u-width--xl--3"><span class="o-grid__inner">Width item</span></div>
+   *     <div class="o-grid__item u-width--l--6 u-width--xl--3"><span class="o-grid__inner">Width item</span></div>
+   *     <div class="o-grid__item u-width--l--6 u-width--xl--3"><span class="o-grid__inner">Width item</span></div>
+   *   </div>
+   */
+@media (min-width: 75em) {
+  .u-width--xl--1 {
+    width: 8.3333333%; }
+  .u-width--xl--2 {
+    width: 16.6666667%; }
+  .u-width--xl--3 {
+    width: 25%; }
+  .u-width--xl--4 {
+    width: 33.3333333%; }
+  .u-width--xl--5 {
+    width: 41.6666667%; }
+  .u-width--xl--6 {
+    width: 50%; }
+  .u-width--xl--7 {
+    width: 58.3333333%; }
+  .u-width--xl--8 {
+    width: 66.6666667%; }
+  .u-width--xl--9 {
+    width: 75%; }
+  .u-width--xl--10 {
+    width: 83.3333333%; }
+  .u-width--xl--11 {
+    width: 91.6666667%; }
+  .u-width--xl--12 {
+    width: 100%; } }
+
+/**
+ * Object
+ * Non-cosmetic styles (e.g. the famous media object)
+ */
+/**
+ * @name Grid
+ * @level X.X.
+ * @description
+ *   Fluid width, responsive grid system
+ */
+/**
+ * Variables
+ */
+/**
+ * @name Base
+ * @level X.X.X.
+ * @description
+ *   Mobile first styles for all screen sizes
+ *
+ * @code
+ *   <div class="o-grid o-grid--spaced">
+ *     <div class="o-grid__item u-width--6"><span class="o-grid__inner">Grid item</span></div>
+ *     <div class="o-grid__item u-width--6"><span class="o-grid__inner">Grid item</span></div>
+ *   </div>
+ */
+.o-grid {
+  *zoom: 1; }
+  .o-grid:before, .o-grid:after {
+    display: table;
+    content: ' '; }
+  .o-grid:after {
+    clear: both; }
+  .o-grid.o-grid--spaced {
+    margin-left: -1em; }
+
+.o-grid__item {
+  float: left; }
+  .o-grid--spaced .o-grid__item {
+    padding-left: 1em; }
+
+/**
+   * @name Small
+   * @level X.X.X.
+   * @description
+   *   Screen sizes 30em (480px) and up
+   *
+   * @code
+   *   <div class="o-grid o-grid--spaced">
+   *     <div class="o-grid__item u-width--s--6"><span class="o-grid__inner">Grid item</span></div>
+   *     <div class="o-grid__item u-width--s--6"><span class="o-grid__inner">Grid item</span></div>
+   *   </div>
+   */
+/**
+   * @name Medium
+   * @level X.X.X.
+   * @description
+   *   Screen sizes 45em (720px) and up
+   *
+   * @code
+   *   <div class="o-grid o-grid--spaced">
+   *     <div class="o-grid__item u-width--s--6 u-width--m--3"><span class="o-grid__inner">Grid item</span></div>
+   *     <div class="o-grid__item u-width--s--6 u-width--m--3"><span class="o-grid__inner">Grid item</span></div>
+   *     <div class="o-grid__item u-width--s--6 u-width--m--3"><span class="o-grid__inner">Grid item</span></div>
+   *     <div class="o-grid__item u-width--s--6 u-width--m--3"><span class="o-grid__inner">Grid item</span></div>
+   *   </div>
+   */
+@media (min-width: 45em) {
+  .o-grid.o-grid--spaced {
+    margin-left: -1.5em; }
+  .o-grid--spaced .o-grid__item {
+    padding-left: 1.5em; } }
+
+/**
+   * @name Large
+   * @level X.X.X.
+   * @description
+   *   Screen sizes 60em (960px) and up
+   *
+   * @code
+   *   <div class="o-grid o-grid--spaced">
+   *     <div class="o-grid__item u-width--m--6 u-width--l--3"><span class="o-grid__inner">Grid item</span></div>
+   *     <div class="o-grid__item u-width--m--6 u-width--l--3"><span class="o-grid__inner">Grid item</span></div>
+   *     <div class="o-grid__item u-width--m--6 u-width--l--3"><span class="o-grid__inner">Grid item</span></div>
+   *     <div class="o-grid__item u-width--m--6 u-width--l--3"><span class="o-grid__inner">Grid item</span></div>
+   *   </div>
+   */
+@media (min-width: 60em) {
+  .o-grid.o-grid--spaced {
+    margin-left: -1.5em; }
+  .o-grid--spaced .o-grid__item {
+    padding-left: 1.5em; } }
+
+/**
+   * @name X-Large
+   * @level X.X.X.
+   * @description
+   *   Screen sizes 75em (1200px) and up
+   *
+   * @code
+   *   <div class="o-grid o-grid--spaced">
+   *     <div class="o-grid__item u-width--l--6 u-width--xl--3"><span class="o-grid__inner">Grid item</span></div>
+   *     <div class="o-grid__item u-width--l--6 u-width--xl--3"><span class="o-grid__inner">Grid item</span></div>
+   *     <div class="o-grid__item u-width--l--6 u-width--xl--3"><span class="o-grid__inner">Grid item</span></div>
+   *     <div class="o-grid__item u-width--l--6 u-width--xl--3"><span class="o-grid__inner">Grid item</span></div>
+   *   </div>
+   */
+@media (min-width: 75em) {
+  .o-grid.o-grid--spaced {
+    margin-left: -1.5em; }
+  .o-grid--spaced .o-grid__item {
+    padding-left: 1.5em; } }
+
+/**
+ * Component
+ * Concrete, implementation-specific piece of UI
+ */
+/* No files to import found in component//* */
+
+/*# sourceMappingURL=cultusrego-theme-default.css.map */
