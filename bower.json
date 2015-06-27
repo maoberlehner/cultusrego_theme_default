@@ -24,5 +24,8 @@
   ],
   "devDependencies": {
     "avalanche_system_variable": "^2.0.0"
+  },
+  "dependencies": {
+    "prism": "^1.0.0"
   }
 }
