@@ -7,49 +7,53 @@
  * Custom SASS functions
  */
 /**
- * @name breakpointmax
+ * breakpointmax
+ *
+ * Get the max-width value of a breakpoint
+ * 
  * @level X.X.
- * @description
- *   Get the max-width value of a breakpoint
  *
  * @code [scss]
- *   @media (max-width: breakpointmax($breakpoint-m)) {
- *     .foo { }
- *   }
- *   @media (max-width: breakpointmax($breakpoint-m, 14px)) {
- *     .foo { }
- *   }
+ * @media (max-width: breakpointmax($breakpoint-m)) {
+ *   .foo { }
+ * }
+ * @media (max-width: breakpointmax($breakpoint-m, 14px)) {
+ *   .foo { }
+ * }
  */
 /**
- * @name strip-unit
- * @level X.X.
- * @description
- *   Strip units from values
+ * strip-unit
  *
+ * Strip units from values
+ *
+ * @level X.X.
  * @code [scss]
- *   .foo {
- *     line-height: strip-unit($font-size-s);
- *   }
+ * .foo {
+ *   line-height: strip-unit($font-size-s);
+ * }
  */
 /**
  * System
  * Everything system relevant (e.g. variables)
  */
 /**
- * @name Variable
+ * Variable
+ *
+ * Basic system variables
+ *
  * @level X.X.
- * @description
- *   Basic system variables
  */
 /**
- * @name Color Scheme
+ * Color Scheme
+ *
+ * It's mandatory to use color scheme variables whenever you use colors in your styles
+ * Fancy generator: [coolors.co](http://coolors.co/)
+ *
  * @level X.X.X.
- * @description
- *   It's mandatory to use color scheme variables whenever you use colors in your styles  
- *   Fancy generator: [coolors.co](http://coolors.co/)
  */
 /**
- * @name Basic
+ * Basic
+ *
  * @level X.X.X.X.
  */
 /**
@@ -203,12 +207,194 @@
  * Base
  * Base styles like typography and other global default styles (mostly unclassed HTML elements)
  */
-/* No files to import found in base//* */
+/**
+ * @name Layout
+ * @level X.X.
+ * @description
+ *   Styles that influence basic layout
+ */
+/**
+ * @name Box sizing reset
+ * @level X.X.X.
+ * @description
+ *   Better box model  
+ *   [Paul Irish - * { Box-sizing: Border-box } FTW](http://www.paulirish.com/2012/box-sizing-border-box-ftw/)
+ */
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+/**
+ * @name Typography
+ * @level X.X.
+ * @description
+ *   Font sizes must be set in em or rem.  
+ *   Use em values for elements and rem values for components.  
+ *   [Chris Coyier - Font Size Idea: px at the Root, rem for Components, em for Text Elements](https://css-tricks.com/rems-ems/)
+ */
+/**
+ * Basic font styles
+ */
+html {
+  font-size: 100%;
+  line-height: 1.5; }
+  @media (max-width: 44.9375em) {
+    html {
+      font-size: 87.5%; } }
+  @media (max-width: 29.9375em) {
+    html {
+      font-size: 75%; } }
+
+html, button, input, select, textarea {
+  color: #222;
+  font-family: 'Helvetica Neue', sans-serif; }
+
+/**
+ * @name Headlines
+ * @level X.X.X.
+ * @code
+ *   <h1>Headline 1</h1>
+ *   <h2>Headline 2</h2>
+ *   <h3>Headline 3</h3>
+ *   <h4>Headline 4</h4>
+ *   <h5>Headline 5</h5>
+ *   <h6>Headline 6</h6>
+ */
+h1, h2, h3, h4 {
+  color: #16193B;
+  font-weight: 700;
+  font-family: Futura, 'Trebuchet MS', sans-serif;
+  line-height: 1.35; }
+
+h1 {
+  font-size: 2.25em; }
+
+h2 {
+  font-size: 1.875em; }
+
+h3 {
+  font-size: 1.5em; }
+
+h4 {
+  font-size: 1.25em; }
+
+h5 {
+  font-weight: 700;
+  font-size: 1em; }
+
+h6 {
+  font-weight: 400;
+  font-size: 1em; }
+
+/**
+ * @name Anchors
+ * @level X.X.X.
+ * @code
+ *   <a href="#">readmore...</a>
+ *   <span class="a">readmore...</span>
+ *   <a href="#" class="a a--rev">reversed hover behaviour</a>
+ */
+a, .a {
+  color: #16193B;
+  text-decoration: underline;
+  cursor: pointer; }
+  a:visited, .a:visited {
+    color: #16193B; }
+  a:hover, a:focus, .a:hover, .a:focus {
+    color: #16193B;
+    text-decoration: none; }
+
+.a--rev {
+  text-decoration: none; }
+  .a--rev:hover, .a--rev:focus {
+    text-decoration: underline; }
+
+/**
+ * @name Whitespace
+ * @level X.X.X.
+ * @code
+ *   <h2>Lorem Ipsum</h2>
+ *   <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+ *   tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+ *   <ul>
+ *     <li>Lorem Ipsum dolor</li>
+ *     <li>Lorem Ipsum dolor</li>
+ *   </ul>
+ *   <h3>Lorem Ipsum</h3>
+ *   <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+ *   tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+ */
+h1, h2, h3, h4, h5, h6, h1 + h2, h2 + h3, h3 + h4, h4 + h5, h5 + h6, p, ul, ol, dl, pre, form, table, figure, address, fieldset, blockquote {
+  margin: 0; }
+
+* + h1, * + h2, * + h3, * + h4, * + h5, * + h6 {
+  margin-top: 1em; }
+
+* + p, * + ul, * + ol, * + dl, * + pre, * + form, * + table, * + figure, * + address, * + fieldset, * + blockquote {
+  margin-top: 1.5em; }
+
+ul, ol, dl {
+  padding-left: 1.5em; }
+
+/**
+ * No margin top for nested lists
+ */
+li ul, li ol, li dl {
+  margin-top: 0; }
+
+/**
+ * No margin top for nested tables
+ */
+table table {
+  margin-top: 0; }
+
+/**
+ * Normalize default font related tags
+ */
+b, strong {
+  font-weight: 700; }
+
+small {
+  font-size: 0.85em; }
+
 /**
  * Utility
  * Utility classes that do very specific things (e.g. clearfix)
  */
-/* No files to import found in utility//* */
+/**
+ * @name List reset
+ * @level X.X.
+ * @description
+ *   Display lists without the typical look of a list
+ *
+ * @code
+ *   <ul class="u-list-reset">
+ *     <li>Item 1</li>
+ *     <li>Item 2</li>
+ *   </ul>
+ */
+.u-list-reset {
+  padding-left: 0;
+  list-style-type: none; }
+
+/**
+ * @name Spacing
+ * @level X.X.
+ * @description
+ *   Let elements "breath" with some spacing
+ *
+ * @code
+ *   <div class="u-spacing-wrap">
+ *     <div>No spacing top because I'm the first element</div>
+ *     <div>I have spacing top</div>
+ *     <div>Me too</div>
+ *   </div>
+ */
+.u-spacing-wrap > * + * {
+  margin-top: 1.5em; }
+
 /**
  * Object
  * Non-cosmetic styles (e.g. the famous media object)
@@ -218,6 +404,132 @@
  * Component
  * Concrete, implementation-specific piece of UI
  */
-/* No files to import found in component//* */
+/**
+ * Block
+ * 
+ * @level X.X.
+ */
+.c-block {
+  margin-top: 0.5em; }
+
+/**
+ * Code
+ *
+ * @level X.X.X.
+ */
+* + .c-block--code__code {
+  margin-top: 1.5em; }
+.c-block--code__code pre[class*='language-'] {
+  margin: 0; }
+
+/**
+ * Color
+ *
+ * @level X.X.X.
+ */
+.c-block--color {
+  margin-top: 1.5em; }
+
+.c-block--color__set {
+  padding-left: 0;
+  list-style-type: none; }
+
+.c-block--color__color {
+  display: inline-block; }
+  .c-block--color__color + .c-block--color__color {
+    margin-left: 1.5em; }
+
+.c-block--color__preview {
+  width: 8em;
+  height: 8em;
+  border: 0.0625rem solid #bcbcbc; }
+
+.c-block--color__name {
+  margin: 0; }
+
+/**
+ * Variable
+ *
+ * @level X.X.X.
+ */
+.c-block--variable ul {
+  padding-left: 0;
+  list-style-type: none; }
+
+/**
+ * Footer main
+ * 
+ * @level X.X.
+ */
+.c-footer-main {
+  padding: 0.5em 0;
+  border-top: 0.0625rem solid #efefef; }
+
+/**
+ * Header main
+ * 
+ * @level X.X.
+ */
+.c-header-main {
+  padding: 2em 0;
+  background: #35478C;
+  text-align: center; }
+
+.c-header-main__title, .c-header-main__description {
+  color: #fff; }
+
+.c-header-main__description {
+  margin-top: 0.5em; }
+
+/**
+ * Section
+ * 
+ * @level X.X.
+ */
+.c-section-wrap > .c-section + .c-section {
+  margin-top: 4em;
+  padding-top: 4em;
+  border-top: 0.0625rem solid #d5d5d5; }
+
+.c-section--sub > * + * {
+  margin-top: 3em; }
+* + .c-section--sub {
+  margin-top: 3em; }
+p + .c-section--sub {
+  margin-top: 1.5em; }
+.c-section--sub .c-section--sub > * + * {
+  margin-top: 2em; }
+
+.c-section__anchor {
+  position: absolute;
+  margin-left: -0.75em;
+  padding-right: 0.5em;
+  text-decoration: none;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s;
+          transition: opacity 0.2s; }
+  .c-section__anchor, .c-section__anchor:visited, .c-section__anchor:hover, .c-section__anchor:focus {
+    color: #d5d5d5; }
+  .c-section__anchor:hover, .c-section__anchor:focus {
+    text-decoration: underline; }
+  .c-section__title:hover .c-section__anchor, .c-section__title:focus .c-section__anchor {
+    opacity: 1; }
+
+/**
+ * TOC
+ * 
+ * @level X.X.
+ */
+.c-toc__list {
+  list-style-type: none; }
+
+.c-toc__list--main {
+  padding: 0; }
+  .c-toc__list--main > .c-toc__item + .c-toc__item {
+    margin-top: 0.5em; }
+  .c-toc__list--main > .c-toc__item > .c-toc__link {
+    font-weight: 700;
+    font-size: 1.25em; }
+
 
 /*# sourceMappingURL=cultusrego-theme-default.css.map */

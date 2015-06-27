@@ -1,13 +1,13 @@
 /**
- * @name strip-unit
- * @level X.X.
- * @description
- *   Strip units from values
+ * strip-unit
  *
+ * Strip units from values
+ *
+ * @level X.X.
  * @code [scss]
- *   .foo {
- *     line-height: strip-unit($font-size-s);
- *   }
+ * .foo {
+ *   line-height: strip-unit($font-size-s);
+ * }
  */
 @function strip-unit($number) {
   @return $number / ($number * 0 + 1);

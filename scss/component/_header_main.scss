@@ -1,0 +1,19 @@
+/**
+ * Header main
+ * 
+ * @level X.X.
+ */
+.c-header-main {
+  padding: $spacing-l 0;
+  background: $cs-b;
+  text-align: center;
+}
+
+.c-header-main__title,
+.c-header-main__description {
+  color: $cs-b-contrast;
+}
+
+.c-header-main__description {
+  margin-top: $spacing-xs;
+}

@@ -23,7 +23,11 @@
     "tests"
   ],
   "devDependencies": {
-    "avalanche_system_variable": "^2.0.0"
+    "avalanche_system_variable": "^2.0.0",
+    "avalanche_base_typography": "^2.0.0",
+    "avalanche_base_layout": "^2.0.0",
+    "avalanche_utility_spacing": "^2.0.0",
+    "avalanche_utility_list_reset": "^2.0.0"
   },
   "dependencies": {
     "prism": "^1.0.0"

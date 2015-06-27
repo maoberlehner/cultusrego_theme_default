@@ -50,7 +50,11 @@
     </div>
   {% endif %}
 
-  {% for section in section.sub %}
-    {% include 'section.html' %}
-  {% endfor %}
+  {% if section.sub %}
+    <div class="c-section c-section--sub">
+      {% for section in section.sub %}
+        {% include 'section.html' %}
+      {% endfor %}
+    </div>
+  {% endif %}
 </section>

@@ -9,6 +9,7 @@
 
     <link rel="stylesheet" href="vendor/prism/themes/prism.css">
     <link rel="stylesheet" href="vendor/prism/themes/prism-okaidia.css">
+    <link rel="stylesheet" href="vendor/cultusrego_theme_default/css/cultusrego-theme-default.css">
     {% for source_file in source %}
       <link rel="stylesheet" href="{{ source_file }}">
     {% endfor %}
@@ -16,9 +17,11 @@
   <body>
     {% include 'header.html' %}
     {% include 'toc.html' %}
-    {% for section in sections %}
-      {% include 'section.html' %}
-    {% endfor %}
+    <div class="c-section-wrap">
+      {% for section in sections %}
+        {% include 'section.html' %}
+      {% endfor %}
+    </div>
     {% include 'footer.html' %}
     <script src="vendor/prism/prism.js"></script>
   </body>

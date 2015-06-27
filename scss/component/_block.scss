@@ -1,0 +1,70 @@
+/**
+ * Block
+ * 
+ * @level X.X.
+ */
+.c-block {
+  margin-top: $spacing-xs;
+}
+
+
+
+/**
+ * Code
+ *
+ * @level X.X.X.
+ */
+.c-block--code__code {
+  * + & {
+    margin-top: $spacing-m;
+  }
+  pre[class*='language-'] {
+    margin: 0;
+  }
+}
+
+
+
+/**
+ * Color
+ *
+ * @level X.X.X.
+ */
+.c-block--color {
+  margin-top: $spacing-m;
+}
+
+.c-block--color__set {
+  @include u-list-reset();
+}
+
+.c-block--color__color {
+  display: inline-block;
+  + .c-block--color__color {
+    margin-left: $spacing-m;
+  }
+}
+
+.c-block--color__preview {
+  width: 8em;
+  height: 8em;
+  border: 0.0625rem solid $cs-grey-c;
+}
+
+.c-block--color__name {
+  margin: 0;
+}
+
+
+
+
+/**
+ * Variable
+ *
+ * @level X.X.X.
+ */
+.c-block--variable {
+  ul {
+    @include u-list-reset();
+  }
+}
