@@ -22,8 +22,7 @@
     "test",
     "tests"
   ],
-  "dependencies": {
-    "avalanche_system_variable": "^2.0.0",
-    "normalize.css": "~3.0.3"
+  "devDependencies": {
+    "avalanche_system_variable": "^2.0.0"
   }
 }
