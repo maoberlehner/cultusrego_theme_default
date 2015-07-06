@@ -3,7 +3,7 @@
   {{ section.description|markdown }}
 
   {% if section.code %}
-    <div class="c-block c-block--code">
+    <div class="c-block c-block--code o-island">
       {% if section.code_render %}
         <div class="c-block--code__rendered">
           {{ section.code|raw }}
@@ -34,13 +34,13 @@
   {% endif %}
 
   {% if section.variable %}
-    <div class="c-block c-block--variable">
+    <div class="c-block c-block--variable o-island">
       {{ section.variable|markdown }}
     </div>
   {% endif %}
 
   {% if section.font %}
-    <div class="c-block c-block--font">
+    <div class="c-block c-block--font o-island">
       <div class="c-block--font c-block--font__preview" style="font-family:{{ section.font }};">
         ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />
         abcdefghijklmnopqrstuvwxyz<br />
