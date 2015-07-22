@@ -7,9 +7,10 @@
     <meta name="description" content="{{ description }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="vendor/prism/themes/prism.css">
-    <link rel="stylesheet" href="vendor/prism/themes/prism-okaidia.css">
-    <link rel="stylesheet" href="vendor/cultusrego_theme_default/css/cultusrego-theme-default.css">
+    <link rel="stylesheet" href="{{ base_path }}vendor/normalize.css/normalize.css">
+    <link rel="stylesheet" href="{{ base_path }}vendor/prism/themes/prism.css">
+    <link rel="stylesheet" href="{{ base_path }}vendor/prism/themes/prism-okaidia.css">
+    <link rel="stylesheet" href="{{ base_path }}vendor/cultusrego_theme_default/css/cultusrego-theme-default.css">
     {% for source_file in source %}
       <link rel="stylesheet" href="{{ source_file }}">
     {% endfor %}
@@ -23,6 +24,9 @@
       {% endfor %}
     </div>
     {% include 'footer.html' %}
-    <script src="vendor/prism/prism.js"></script>
+    <script src="{{ base_path }}vendor/prism/components/prism-core.min.js"></script>
+    <script src="{{ base_path }}vendor/prism/components/prism-markup.min.js"></script>
+    <script src="{{ base_path }}vendor/prism/components/prism-css.min.js"></script>
+    <script src="{{ base_path }}vendor/prism/components/prism-scss.min.js"></script>
   </body>
 </html>
