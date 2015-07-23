@@ -17,13 +17,15 @@
   </head>
   <body>
     {% include 'header.html' %}
-    {% include 'toc.html' %}
-    <div class="c-section-wrap">
-      {% for section in sections %}
-        {% include 'section.html' %}
-      {% endfor %}
+    <div class="u-container">
+      {% include 'toc.html' %}
+      <div class="c-section-wrap">
+        {% for section in sections %}
+          {% include 'section.html' %}
+        {% endfor %}
+      </div>
+      {% include 'footer.html' %}
     </div>
-    {% include 'footer.html' %}
     <script src="{{ base_path }}vendor/prism/components/prism-core.min.js"></script>
     <script src="{{ base_path }}vendor/prism/components/prism-markup.min.js"></script>
     <script src="{{ base_path }}vendor/prism/components/prism-css.min.js"></script>
