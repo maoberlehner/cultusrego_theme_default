@@ -1,0 +1,34 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{{ title }}</title>
+    <meta name="description" content="{{ description }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="{{ base_path }}vendor/normalize.css/normalize.css">
+    <link rel="stylesheet" href="{{ base_path }}vendor/prism/themes/prism.css">
+    <link rel="stylesheet" href="{{ base_path }}vendor/prism/themes/prism-okaidia.css">
+    <link rel="stylesheet" href="{{ base_path }}vendor/cultusrego_theme_default/css/cultusrego-theme-default.css">
+    {% for source_file in source %}
+      <link rel="stylesheet" href="{{ source_file }}">
+    {% endfor %}
+  </head>
+  <body>
+    {% include 'header.html' %}
+    <div class="u-container">
+      {% include 'toc.html' %}
+      <div class="c-section-wrap">
+        {% for section in sections %}
+          {% include 'section.html' %}
+        {% endfor %}
+      </div>
+      {% include 'footer.html' %}
+    </div>
+    <script src="{{ base_path }}vendor/prism/components/prism-core.min.js"></script>
+    <script src="{{ base_path }}vendor/prism/components/prism-markup.min.js"></script>
+    <script src="{{ base_path }}vendor/prism/components/prism-css.min.js"></script>
+    <script src="{{ base_path }}vendor/prism/components/prism-scss.min.js"></script>
+  </body>
+</html>

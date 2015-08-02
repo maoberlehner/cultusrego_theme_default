@@ -1,0 +1,20 @@
+/**
+ * @name List reset
+ * @level X.X.
+ * @description
+ *   Display lists without the typical look of a list
+ *
+ * @code
+ *   <ul class="u-list-reset">
+ *     <li>Item 1</li>
+ *     <li>Item 2</li>
+ *   </ul>
+ */
+@mixin u-list-reset() {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.u-list-reset {
+  @include u-list-reset();
+}

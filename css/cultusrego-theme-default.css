@@ -1,0 +1,385 @@
+/**
+ * cultusrego_theme_default
+ * Default theme for the cultusrego styleguide generator
+ */
+/**
+ * Function
+ * Custom SASS functions
+ */
+/**
+ * breakpointmax
+ *
+ * Get the max-width value of a breakpoint
+ * 
+ * @level X.X.
+ *
+ * @code [scss]
+ * @media (max-width: breakpointmax($breakpoint-m)) {
+ *   .foo { }
+ * }
+ * @media (max-width: breakpointmax($breakpoint-m, 14px)) {
+ *   .foo { }
+ * }
+ */
+/**
+ * strip-unit
+ *
+ * Strip units from values
+ *
+ * @level X.X.
+ * @code [scss]
+ * .foo {
+ *   line-height: strip-unit($font-size-s);
+ * }
+ */
+/**
+ * System
+ * Everything system relevant (e.g. variables)
+ */
+/**
+ * Variable
+ *
+ * Basic system variables
+ *
+ * @level X.X.
+ */
+/**
+ * Color Scheme
+ *
+ * It's mandatory to use color scheme variables whenever you use colors in your styles
+ * Fancy generator: [coolors.co](http://coolors.co/)
+ *
+ * @level X.X.X.
+ */
+/**
+ * Basic
+ *
+ * @level X.X.X.X.
+ */
+/**
+ * @colors
+ *   $cs-a|#16193B $cs-b|#35478C $cs-c|#4E7AC7 $cs-d|#7FB2F0 $cs-e|#ADD5F7
+ *   $cs-a-contrast|#fff $cs-b-contrast|#fff $cs-c-contrast|#fff $cs-d-contrast|#fff $cs-e-contrast|#fff
+ */
+/**
+ * @name Alerts
+ * @level X.X.X.X.
+ * @description Colors for alerts e.g. success, error, info,...
+ */
+/**
+ * @colors
+ *   $cs-positive|#468847 $cs-neutral|#3A87AD $cs-cautious|#c09853 $cs-negative|#b94a48
+ */
+/**
+ * @name Grey
+ * @level X.X.X.X.
+ */
+/**
+ * @colors
+ *   $cs-grey-a|#efefef $cs-grey-b|#d5d5d5 $cs-grey-c|#bcbcbc
+ */
+/**
+ * @name Typography
+ * @level X.X.X.
+ * @description
+ *   If you use webfonts set the font weight variables according to the font weights the font provides  
+ *   e.g. you use a Google font like http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700  
+ *   In this case set the font weights to 200, 400 and 700  
+ *   If you set a font weight in your css you must use this variables!
+ */
+/**
+ * @name Basic configuration
+ * @level X.X.X.X.
+ * @description
+ *   Do not use the **$font-base-size** and **$font-base-line-height** directly in your styles!
+ *
+ * 1. must be in px, do not use in your styles
+ */
+/* [1] */
+/* [1] */
+/**
+ * @variables
+ *   $font-base-size|16px $font-base-line-height|24px $font-base-color|#222
+ */
+/**
+ * @name Font sizes
+ * @level X.X.X.X.
+ */
+/**
+ * @variables
+ *   $font-size-xs|0.75em $font-size-s|0.85em $font-size-m|1em $font-size-l|1.25em $font-size-xl|1.5em $font-size-xxl|1.875em $font-size-xxxl|2.25em
+ */
+/**
+ * @variables
+ *   $font-size-h1|2.25em $font-size-h2|1.875em $font-size-h3|1.5em $font-size-h4|1.25em $font-size-h5|1em $font-size-h6|1em
+ */
+/**
+ * @name System fonts
+ * @level X.X.X.X.
+ * @description
+ *   Font sizes and weights are defined globally to ensure a consistent look
+ */
+/**
+ * @name Font A
+ * @level X.X.X.X.X.
+ */
+/**
+ * @font ['Helvetica Neue', sans-serif]
+ *   ABCDEFGHIJKLMNOPQRSTUVWXYZ  
+ *   abcdefghijklmnopqrstuvwxyz  
+ *   0123456789  
+ *   !&/()$=@;:,.
+ */
+/**
+ * @name Font B
+ * @level X.X.X.X.X.
+ */
+/**
+ * @font [Futura, 'Trebuchet MS', sans-serif]
+ *   ABCDEFGHIJKLMNOPQRSTUVWXYZ  
+ *   abcdefghijklmnopqrstuvwxyz  
+ *   0123456789  
+ *   !&/()$=@;:,.
+ */
+/**
+ * @name Anchors
+ * @level X.X.X.X.
+ */
+/**
+ * @colors
+ *   $a-color|#16193B $a-color-visited|#16193B $a-color-hover|#16193B
+ *
+ * @variables
+ *   $a-text-decoration|underline $a-text-decoration-hover|none
+ */
+/**
+ * @name Text selection
+ * @level X.X.X.X.
+ * @description
+ *   Select some text to see it in action
+ */
+/**
+ * @colors
+ *   $selection-background|#16193B $selection-color|#fff
+ */
+/**
+ * @name Breakpoints
+ * @level X.X.X.
+ * @description
+ *   More infos about media queries:  
+ *   [Brad Frost - 7 Habits of highly effective media queries](http://bradfrost.com/blog/post/7-habits-of-highly-effective-media-queries/)
+ */
+/**
+ * @name min Breakpoints
+ * @level X.X.X.X.
+ */
+/**
+ * @variables
+ *   $breakpoint-s|30em $breakpoint-m|45em $breakpoint-l|60em $breakpoint-xl|75em
+ */
+/**
+ * @name max Breakpoints
+ * @level X.X.X.X.
+ * @description
+ *   Use with care, min-width breakpoints should be preferred!
+ */
+/**
+ * @variables
+ *   $breakpoint-max-s|29.9375em $breakpoint-max-m|44.9375em $breakpoint-max-l|59.9375em $breakpoint-max-xl|74.9375em
+ */
+/**
+ * @name Spacing
+ * @level X.X.X.
+ */
+/**
+ * @variables
+ *   $spacing-xs|0.5em $spacing-s|1em $spacing-m|1.5em $spacing-l|2em $spacing-xl|3em $spacing-xxl|4em $spacing-xxxl|5em
+ */
+/**
+ * @name Layout
+ * @level X.X.X.
+ */
+/**
+ * @variables
+ *   $layout-max-width|62em $layout-box-sizing-reset|true
+ */
+/**
+ * Base
+ * Base styles like typography and other global default styles (mostly unclassed HTML elements)
+ */
+/* No files to import found in base//* */
+/**
+ * Utility
+ * Utility classes that do very specific things (e.g. clearfix)
+ */
+/**
+ * @name List reset
+ * @level X.X.
+ * @description
+ *   Display lists without the typical look of a list
+ *
+ * @code
+ *   <ul class="u-list-reset">
+ *     <li>Item 1</li>
+ *     <li>Item 2</li>
+ *   </ul>
+ */
+.u-list-reset {
+  padding-left: 0;
+  list-style-type: none; }
+
+/**
+ * @name Spacing
+ * @level X.X.
+ * @description
+ *   Let elements "breath" with some spacing
+ *
+ * @code
+ *   <div class="u-spacing-wrap">
+ *     <div>No spacing top because I'm the first element</div>
+ *     <div>I have spacing top</div>
+ *     <div>Me too</div>
+ *   </div>
+ */
+.u-spacing-wrap > * + * {
+  margin-top: 1.5em; }
+
+/**
+ * Object
+ * Non-cosmetic styles (e.g. the famous media object)
+ */
+/* No files to import found in object//* */
+/**
+ * Component
+ * Concrete, implementation-specific piece of UI
+ */
+/**
+ * Block
+ * 
+ * @level X.X.
+ */
+.c-block {
+  margin-top: 0.5em; }
+
+/**
+ * Code
+ *
+ * @level X.X.X.
+ */
+* + .c-block--code__code {
+  margin-top: 1.5em; }
+.c-block--code__code pre[class*='language-'] {
+  margin: 0; }
+
+/**
+ * Color
+ *
+ * @level X.X.X.
+ */
+.c-block--color {
+  margin-top: 1.5em; }
+
+.c-block--color__set {
+  padding-left: 0;
+  list-style-type: none; }
+
+.c-block--color__color {
+  display: inline-block; }
+  .c-block--color__color + .c-block--color__color {
+    margin-left: 1.5em; }
+
+.c-block--color__preview {
+  width: 8em;
+  height: 8em;
+  border: 0.0625rem solid #bcbcbc; }
+
+.c-block--color__name {
+  margin: 0; }
+
+/**
+ * Variable
+ *
+ * @level X.X.X.
+ */
+.c-block--variable ul {
+  padding-left: 0;
+  list-style-type: none; }
+
+/**
+ * Footer main
+ * 
+ * @level X.X.
+ */
+.c-footer-main {
+  padding: 0.5em 0;
+  border-top: 0.0625rem solid #efefef; }
+
+/**
+ * Header main
+ * 
+ * @level X.X.
+ */
+.c-header-main {
+  margin-bottom: 4em;
+  padding: 2em 0;
+  background: #35478C;
+  text-align: center; }
+
+.c-header-main__title, .c-header-main__description {
+  color: #fff; }
+
+.c-header-main__description {
+  margin-top: 0.5em; }
+
+/**
+ * Section
+ * 
+ * @level X.X.
+ */
+.c-section-wrap > .c-section + .c-section {
+  margin-top: 4em;
+  padding-top: 4em;
+  border-top: 0.0625rem solid #d5d5d5; }
+
+.c-section--sub > * + * {
+  margin-top: 3em; }
+* + .c-section--sub {
+  margin-top: 3em; }
+p + .c-section--sub {
+  margin-top: 1.5em; }
+.c-section--sub .c-section--sub > * + * {
+  margin-top: 2em; }
+
+.c-section__anchor {
+  position: absolute;
+  margin-left: -0.75em;
+  padding-right: 0.5em;
+  text-decoration: none;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s;
+          transition: opacity 0.2s; }
+  .c-section__anchor, .c-section__anchor:visited, .c-section__anchor:hover, .c-section__anchor:focus {
+    color: #d5d5d5; }
+  .c-section__anchor:hover, .c-section__anchor:focus {
+    text-decoration: underline; }
+  .c-section__title:hover .c-section__anchor, .c-section__title:focus .c-section__anchor {
+    opacity: 1; }
+
+/**
+ * TOC
+ * 
+ * @level X.X.
+ */
+.c-toc__list {
+  list-style-type: none; }
+
+.c-toc__list--main {
+  padding: 0; }
+  .c-toc__list--main > .c-toc__item + .c-toc__item {
+    margin-top: 0.5em; }
+  .c-toc__list--main > .c-toc__item > .c-toc__link {
+    font-weight: 700;
+    font-size: 1.25em; }
+
+
+/*# sourceMappingURL=cultusrego-theme-default.css.map */

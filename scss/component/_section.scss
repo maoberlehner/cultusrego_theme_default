@@ -1,0 +1,48 @@
+/**
+ * Section
+ * 
+ * @level X.X.
+ */
+.c-section-wrap {
+  > .c-section + .c-section {
+    margin-top: $spacing-xxl;
+    padding-top: $spacing-xxl;
+    border-top: 0.0625rem solid $cs-grey-b;
+  }
+}
+
+.c-section--sub {
+  @include u-spacing-wrap($spacing-xl);
+  * + & {
+    margin-top: $spacing-xl;
+  }
+  p + & {
+    margin-top: $spacing-m;
+  }
+  .c-section--sub {
+    @include u-spacing-wrap($spacing-l);
+  }
+}
+
+.c-section__anchor {
+  position: absolute;
+  margin-left: -0.75em;
+  padding-right: 0.5em;
+  text-decoration: none;
+  opacity: 0;
+  transition: opacity 0.2s;
+  &,
+  &:visited,
+  &:hover,
+  &:focus {
+    color: $cs-grey-b;
+  }
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+  .c-section__title:hover &,
+  .c-section__title:focus & {
+    opacity: 1;
+  }
+}

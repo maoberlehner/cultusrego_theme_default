@@ -15,12 +15,19 @@
   "ignore": [
     "**/.*",
     "node_modules",
+    "scss",
     "vendor",
+    "gulpfile.js",
+    "package.json",
     "test",
     "tests"
   ],
+  "devDependencies": {
+    "avalanche_system_variable": "^2.0.0",
+    "avalanche_utility_spacing": "^2.0.0",
+    "avalanche_utility_list_reset": "^2.0.0"
+  },
   "dependencies": {
-    "avalanche_object_grid": "^2.0.0",
-    "normalize.css": "~3.0.3"
+    "prism": "^1.0.0"
   }
 }
