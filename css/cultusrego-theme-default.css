@@ -320,6 +320,7 @@
  * @level X.X.
  */
 .c-header-main {
+  margin-bottom: 4em;
   padding: 2em 0;
   background: #35478C;
   text-align: center; }
